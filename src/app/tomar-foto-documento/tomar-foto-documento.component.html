@@ -1,0 +1,5 @@
+<webcam #webcam [trigger]="trigger$" (imageCapture)="handleImage($event)" [imageType]="'image/png'" [width]="256" [height]="192"></webcam>
+    <button (click)="triggerSnapshot()">Tomar foto</button>
+    <div *ngIf="barcodeData">
+      Código de barras: {{ barcodeData }}
+    </div>
